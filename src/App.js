@@ -66,12 +66,8 @@ class App extends Component{
                     <Main title = {this.state.title} content = {this.rocketContent}/>
                     {this.state.rocketFeatures && <Feautures property={this.state} content = {this.rocketContent}/>}
                 </Route>
-                <Route path='/calendar'>
-                    <Calendar />
-                </Route>
-                <Route path='/details'>
-                    <Details />
-                </Route>
+                <Route path='/calendar' component={Calendar}/>
+                <Route path='/details/:id' component={Details}/>
                 {this.state.links && <Footer {...this.state.links} />}
             </BrowserRouter>
         );

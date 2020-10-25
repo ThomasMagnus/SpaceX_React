@@ -1,7 +1,7 @@
 import React from "react";
 import './main.css'
 
-const Main = ({content, title}) => {
+const Main = ({content, title, name}) => {
 
     let video, videoPath;
 
@@ -15,7 +15,7 @@ const Main = ({content, title}) => {
     return (
         <section className="main">
             <h1 className="title">
-                {title ? title : 'Календарь SpaceX'}
+                {title || name || 'Календарь SpaceX'}
             </h1>
 
             <div className="video-container">
