@@ -9,7 +9,6 @@ const Details = (props) => {
     const history = useHistory()
     const {getLaunch} = useLaunches()
     const launch = getLaunch(props.match.params.id);
-    console.log(launch)
 
     return (
         <>

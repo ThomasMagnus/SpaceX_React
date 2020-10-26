@@ -17,6 +17,7 @@ const Calendar = () => {
                                 <article className="launches">
                                     <div className="launches-image">
                                         <img src={item.links.patch.small} alt=""/>
+                                        {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                                         <a className="launches-youtube" href="https://www.youtube.com/watch?v=dLQ2tZEH6G0"/>
                                     </div>
                                     <div className="launches-content">

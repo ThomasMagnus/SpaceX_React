@@ -5,6 +5,17 @@ const Main = ({content, title, name}) => {
 
     let video, videoPath;
 
+    const videoFile = () => {
+        if (name) {
+            return
+        } else {
+            return (
+                <video className="video" autoPlay loop muted src={videoPath && video[0] ? videoPath + video[0]
+                    : './video/earth.mp4'}/>
+            )
+        }
+    }
+
     try {
         video = content[title];
         videoPath = "./video/"
@@ -19,8 +30,7 @@ const Main = ({content, title, name}) => {
             </h1>
 
             <div className="video-container">
-                <video className="video" autoPlay loop muted src={videoPath && video[0] ? videoPath + video[0]
-                    : './video/earth.mp4'}/>
+                {videoFile()}
             </div>
         </section>
     )
